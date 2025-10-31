@@ -1,18 +1,26 @@
 #include <iostream>
+#include <string>
+
+int computeResult(int value) {
+    // Simple placeholder implementation that returns the input value.
+    return value;
+}
 
 int main() {
     std::cout << "Starting program" << std::endl;
-    int result = computeResult(42); // computeResult is not declared anywhere
+    int result = computeResult(42);
     std::cout << "Result: " << result << std::endl;
 
-    if(result = 10) { // assignment instead of comparison
+    if (result == 10) {
         std::cout << "Result is ten!" << std::endl;
     }
 
-    std::string text = 12345; // assigning int to string
-    std::cout << text.substr(100, 10) << std::endl; // substr out of range
+    std::string text = std::to_string(12345);
+    if (text.size() > 100) {
+        std::cout << text.substr(100, 10) << std::endl;
+    } else {
+        std::cout << "Text too short for requested substring" << std::endl;
+    }
 
-    undeclaredVariable += 1; // variable not declared
-
-    return "done"; // returning const char* from int function
+    return 0;
 }
